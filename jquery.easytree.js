@@ -559,15 +559,17 @@
                 }
             }
         }
-        function unactivateAll(nodes) {
+        function unactivateAll(nodes, nodesOnly) {
             var i = 0;
             for (i = 0; i < nodes.length; i++) {
                 var n = nodes[i];
                 n.isActive = false;
-                $('#' + n.id).removeClass('easytree-active');
+                if(!nodesOnly){
+                    $('#' + n.id).closest("ul").find('.easytree-active').removeClass('easytree-active');
+                }
                 var hasChildren = n.children && n.children.length > 0;
                 if (hasChildren) {
-                    unactivateAll(n.children);
+                    unactivateAll(n.children, true);
                 }
             }
         }
