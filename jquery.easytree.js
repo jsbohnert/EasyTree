@@ -5,6 +5,8 @@
  * Copyright 2014 Matthew Rand
  * Released under the MIT license
  * V1.0.1
+ *
+ * Modifications commenced by James Bohnert 2015 - https://github.com/jsbohnert 
  */
 
 
